@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+
+    <title>Register Page</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row centered-items">
+            <div class="col-md-offset-4 col-md-4 form">
+                <div class="row">
+                    <div class="col-md-12 title">
+                        <h1 class="h1-lg txt-c mt-10"><i class="fas fa-user-plus"></i> Register</h1>
+                    </div>
+                    <div class="col-md-12 forms mt-10">
+                        <form>
+                            <div class="input">
+                                <div class="input-icon">
+                                    <i class="far fa-user"></i>
+                                </div>
+                                <input id="username" placeholder="Username" type="text" required class="validate"
+                                    autocomplete="off">
+                            </div>
+                            <div class="input">
+                                <div class="input-icon">
+                                    <i class="fas fa-at"></i>
+                                </div>
+                                <input id="email" placeholder="Email Adress" type="email" required class="validate"
+                                    autocomplete="off">
+                            </div>
+                            <div class="input">
+                                <div class="input-icon">
+                                    <i class="fas fa-unlock-alt"></i>
+                                </div>
+                                <input id="password" placeholder="Password" type="password" required>
+                                <span toggle="#password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                            </div>
+                            <div class="check-me mt-10 ml-55">
+                                <input type="checkbox" id="checkbox">
+                                <a href=""><span class="h1-sm">I agree to the Terms of Service</span></a>
+                            </div>
+                            <button type="button" class="btn btn-gry mt-10 ml-55">Register</button>
+                        </form>
+                    </div>
+                </div>
+
+                <hr class="mt-25">
+
+                <div class="row">
+                    <div class="col-md-12 ml-55">
+                        <span class="h1-sm">Already have an account?</span>
+                        <br>
+                        <button type="button" class="btn btn-gry mt-10">Go Login</button>
+                    </div>
+                </div>
+
+                <hr>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./assets/js/jquery-3.4.1.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.js"></script>
+
+    <script>
+        $(".toggle-password").click(function () {
+
+            $(this).toggleClass("fa-eye fa-eye-slash");
+            var input = $($(this).attr("toggle"));
+            if (input.attr("type") == "password") {
+                input.attr("type", "text");
+            } else {
+                input.attr("type", "password");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
